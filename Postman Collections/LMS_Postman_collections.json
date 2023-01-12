@@ -233,9 +233,7 @@
 									"pm.test(\"Status code is 200\",()=>{\r",
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
-									"pm.test(\"Status code is 400\",()=>{\r",
-									"    pm.response.to.have.status(400);\r",
-									"});\r",
+									"\r",
 									"\r",
 									"tests[\"Body matches string\"] = responseBody.has(\"deleted Successfully!\");\r",
 									"\r",
@@ -438,7 +436,7 @@
 	],
 	"variable": [
 		{
-			"id": "d69ee3a5-a12e-4b25-934b-99c7d2e01298",
+			"id": "4b3b1107-3293-463e-92a2-c415329337f6",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
