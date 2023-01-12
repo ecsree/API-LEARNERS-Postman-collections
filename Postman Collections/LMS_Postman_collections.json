@@ -486,7 +486,7 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "PUT",
+						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
@@ -497,23 +497,7 @@
 								}
 							}
 						},
-						"url": {
-							"raw": "{{baseurl}}/program/:programName",
-							"host": [
-								"{{baseurl}}"
-							],
-							"path": [
-								"program",
-								":programName"
-							],
-							"variable": [
-								{
-									"id": "9a80e828-12a1-46a1-bfc0-d6b0255b1ce0",
-									"key": "programName",
-									"value": null
-								}
-							]
-						}
+						"url": "{{baseurl}}/saveprogram"
 					},
 					"response": []
 				}
@@ -545,7 +529,7 @@
 	],
 	"variable": [
 		{
-			"id": "11409070-2ba8-4c5a-90d2-4047af408b22",
+			"id": "d0f411e7-ac01-4e2a-bc2f-f761ade52c5b",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
