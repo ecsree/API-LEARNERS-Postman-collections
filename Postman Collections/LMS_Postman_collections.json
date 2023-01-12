@@ -525,7 +525,7 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "POST",
+						"method": "DELETE",
 						"header": [],
 						"body": {
 							"mode": "raw",
@@ -568,7 +568,7 @@
 	],
 	"variable": [
 		{
-			"id": "3541ec68-6575-425d-a36d-31a46f7049c5",
+			"id": "aefcf398-3533-4544-95d5-9a212bda825f",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
