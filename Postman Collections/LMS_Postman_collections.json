@@ -111,11 +111,11 @@
 								"exec": [
 									"\r",
 									"\r",
-									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"pm.test(\"Validating response time is less than 200ms\", function () {\r",
 									"    pm.expect(pm.response.responseTime).to.be.below(300);\r",
 									"\r",
 									"});\r",
-									"pm.test(\"Successful POST request\", function () {\r",
+									"pm.test(\"Validating successful POST request\", function () {\r",
 									"    pm.expect(pm.response.code).to.be.oneOf([201, 200]);\r",
 									"});"
 								],
@@ -374,7 +374,7 @@
 	],
 	"variable": [
 		{
-			"id": "436a501a-1d00-4774-b05c-421a0bc331e9",
+			"id": "85341cc3-7d9e-435d-a62f-e925013183d9",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
