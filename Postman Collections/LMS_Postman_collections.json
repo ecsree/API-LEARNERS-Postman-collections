@@ -217,13 +217,44 @@
 				},
 				{
 					"name": "BatchId",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4ac16b1f-2a8a-4bc6-bd62-9541acf0e23b",
+								"exec": [
+									"pm.test(\"Status code is 200\",()=>{\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "b7f349f3-16b9-44b2-8128-d086ffaf494b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/batches/:(batchid)",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"batches",
+								":(batchid)"
+							],
+							"variable": [
+								{
+									"key": "(batchid)",
+									"value": null
+								}
+							]
+						}
 					},
 					"response": []
 				}
@@ -386,7 +417,7 @@
 	],
 	"variable": [
 		{
-			"id": "f7f5a8ae-cff4-4705-b834-929a124a9421",
+			"id": "7016ba79-a582-4a2e-99e1-a9e57b7e75e4",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
