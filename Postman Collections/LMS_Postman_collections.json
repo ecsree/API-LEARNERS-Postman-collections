@@ -1,0 +1,397 @@
+{
+	"info": {
+		"_postman_id": "510b5616-be8d-41d1-8217-d30a3a39f75f",
+		"name": "LMS Postman collections",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Batches",
+			"item": [
+				{
+					"name": "Post To Create batch",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "16f73039-363b-478d-b970-65f56156a83a",
+								"exec": [
+									"pm.test(\"Verify response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(300);\r",
+									"    \r",
+									"});\r",
+									"pm.test(\"Successful POST request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([201, 200]);\r",
+									"    });\r",
+									"    \r",
+									"    console.log(pm.response.code);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "1b320943-40f2-4d2e-bd3e-c253cb2643e0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"batchName\": \"PY02\",\r\n\"batchDescription\": \"Python\",\r\n\"batchStatus\": \"Active\",\r\n\"batchNoOfClasses\": 12,\r\n\"programId\": 395\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/batches"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Batches By Batch Name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "16f73039-363b-478d-b970-65f56156a83a",
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(300);\r",
+									"\r",
+									"});\r",
+									"pm.test(\"Successful POST request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([201, 200]);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "89ce6288-dfec-4090-a372-87a11ea3454c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/batches/batchName/:(BatchName)",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"batches",
+								"batchName",
+								":(BatchName)"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "400",
+									"disabled": true
+								},
+								{
+									"key": "batchId",
+									"value": "52",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"id": "43020192-a89a-432e-93c1-0cc973e3bcfe",
+									"key": "(BatchName)",
+									"value": "PY02",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Batches by ProgramId",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "16f73039-363b-478d-b970-65f56156a83a",
+								"exec": [
+									"\r",
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(300);\r",
+									"\r",
+									"});\r",
+									"pm.test(\"Successful POST request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([201, 200]);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "90453f09-89f5-4205-a609-cd3dfb59cbfd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/batches/program/:(ProgramId)",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"batches",
+								"program",
+								":(ProgramId)"
+							],
+							"variable": [
+								{
+									"key": "(ProgramId)",
+									"value": "190",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BatchId",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "de9209bc-15c4-4696-9591-d43f56ffad64",
+								"exec": [
+									"pm.test(\"Status code is 200\",()=>{\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type header is application/json\",() => {\r",
+									"    pm.expect(\r",
+									"    pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+									"});\r",
+									"\r",
+									"const jsoninfo=pm.response.json();\r",
+									"pm.test(\"Test data type of the response\", () =>{\r",
+									"    pm.expect(jsoninfo).to.be.an(\"object\");\r",
+									"    pm.expect(jsoninfo.batchName).to.be.a(\"string\");\r",
+									"    pm.expect(jsoninfo.batchStatus).to.be.a(\"string\");\r",
+									"    pm.expect(jsoninfo.programId).to.be.a(\"number\");\r",
+									"\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "3143d3e8-b6d0-47c0-b569-27514e11e59a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"batchName\": \"SDET78\",\r\n        \"batchDescription\": \"Java\",\r\n        \"batchStatus\": \"Active\",\r\n        \"batchNoOfClasses\": 12,\r\n        \"programId\": 459,\r\n        \"programName\": \"InterfaceStrikers-SDET-006\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/batches/:batchid",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"batches",
+								":batchid"
+							],
+							"variable": [
+								{
+									"key": "batchid",
+									"value": "105",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "66afdad8-a421-4581-a4a3-d0f15f206ee9"
+		},
+		{
+			"name": "Programs",
+			"item": [
+				{
+					"name": "Get all programs",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "1fcd85ab-e41f-4f2e-82a3-5a9272f90c9b",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "98685280-e11d-4fda-bf3a-bedc45d64212",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseurl}}/allPrograms"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Program by ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5040b543-3f26-418d-9b3a-1f3d45586463",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "08574813-88e4-4ba0-a403-efa0afe454f6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/programs/:programId",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"programs",
+								":programId"
+							],
+							"variable": [
+								{
+									"id": "8a624745-1319-47b0-b204-89bdb042f61d",
+									"key": "programId",
+									"value": "213",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Program by ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5040b543-3f26-418d-9b3a-1f3d45586463",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "2f91aca4-093b-47f3-8d1a-6ec3f79c548d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"programName\": \"API LEARNERS\",\r\n\"programDescription\": \"Python Advanced\",\r\n\"programStatus\": \"Active\",\r\n\"creationTime\": \"2022-09-28T19:53:25.244+00:00\",\r\n\"lastModTime\": \"2022-09-28T19:53:25.244+00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/putprogram/:programId",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"putprogram",
+								":programId"
+							],
+							"variable": [
+								{
+									"id": "9664ea0e-4f27-4ced-b63b-091234ab0654",
+									"key": "programId",
+									"value": null,
+									"type": "any"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "140acfcc-4e7c-4e7a-b8f4-252656af4dc4"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "45c48605-bd2f-4fd0-89c3-1c07b4c3c587",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "44b3d9b0-3b28-4fcb-bb54-ccce44b0b08e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "b4075c79-77b1-4f34-bc06-7168e46eb8a8",
+			"key": "baseurl",
+			"value": "https://lms-backend-service.herokuapp.com/lms",
+			"type": "string"
+		}
+	]
+}
