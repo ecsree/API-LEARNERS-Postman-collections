@@ -500,6 +500,45 @@
 						"url": "{{baseurl}}/saveprogram"
 					},
 					"response": []
+				},
+				{
+					"name": "Delete Program By Id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5040b543-3f26-418d-9b3a-1f3d45586463",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "42da668e-0b8b-41d6-a17e-e5f76395efae",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \r\n        \"programName\": \"Jan23-APILEARNERS-SDET-091\",\r\n        \"programDescription\": \"Python Advanced\",\r\n        \"programStatus\": \"Active\",\r\n        \"creationTime\": \"2023-01-07T04:13:00.000+00:00\",\r\n        \"lastModTime\": \"2023-01-07T04:13:00.000+00:00\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/saveprogram"
+					},
+					"response": []
 				}
 			],
 			"id": "140acfcc-4e7c-4e7a-b8f4-252656af4dc4"
@@ -529,7 +568,7 @@
 	],
 	"variable": [
 		{
-			"id": "d0f411e7-ac01-4e2a-bc2f-f761ade52c5b",
+			"id": "3541ec68-6575-425d-a36d-31a46f7049c5",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
