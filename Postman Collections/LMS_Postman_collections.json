@@ -407,6 +407,61 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Update Program by Name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5040b543-3f26-418d-9b3a-1f3d45586463",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "21b007c6-1e9f-40db-a8f9-d6ac2c01b3be",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"programName\": \"API LEARNERS\",\r\n\"programDescription\": \"Python Advanced\",\r\n\"programStatus\": \"Active\",\r\n\"creationTime\": \"2022-09-28T19:53:25.244+00:00\",\r\n\"lastModTime\": \"2022-09-28T19:53:25.244+00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/putprogram/:programId",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"putprogram",
+								":programId"
+							],
+							"variable": [
+								{
+									"id": "9664ea0e-4f27-4ced-b63b-091234ab0654",
+									"key": "programId",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"id": "140acfcc-4e7c-4e7a-b8f4-252656af4dc4"
@@ -436,7 +491,7 @@
 	],
 	"variable": [
 		{
-			"id": "f9ae50cd-d3cd-4ae1-bea5-4ef87b6cade2",
+			"id": "8373dd2e-17f5-4935-a0a5-6a2aadba8325",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
