@@ -233,7 +233,9 @@
 									"pm.test(\"Status code is 200\",()=>{\r",
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
-									""
+									"pm.test(\"Status code is 200\",()=>{\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
 								],
 								"type": "text/javascript"
 							}
@@ -258,7 +260,7 @@
 							"variable": [
 								{
 									"key": "(batchid)",
-									"value": null
+									"value": "181"
 								}
 							]
 						}
@@ -424,7 +426,7 @@
 	],
 	"variable": [
 		{
-			"id": "6ccd9189-df6d-4c6a-bfc9-3673e984b002",
+			"id": "c2c0d529-62cd-46d7-9ac9-4030d42f27b5",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
