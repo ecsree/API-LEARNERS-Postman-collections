@@ -409,6 +409,45 @@
 					"response": []
 				},
 				{
+					"name": "Create Program",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5040b543-3f26-418d-9b3a-1f3d45586463",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "fe143b0f-8c3e-4ae9-acc1-da6ff0e68c3e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \r\n        \"programName\": \"Jan23-APILEARNERS-SDET-092\",\r\n        \"programDescription\": \"Python Advanced\",\r\n        \"programStatus\": \"Active\",\r\n        \"creationTime\": \"2023-01-07T04:13:00.000+00:00\",\r\n        \"lastModTime\": \"2023-01-07T04:13:00.000+00:00\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/saveprogram"
+					},
+					"response": []
+				},
+				{
 					"name": "Update Program by Name",
 					"event": [
 						{
@@ -459,45 +498,6 @@
 								}
 							]
 						}
-					},
-					"response": []
-				},
-				{
-					"name": "Create Program",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "5040b543-3f26-418d-9b3a-1f3d45586463",
-								"exec": [
-									"pm.test(\"Status code is 200\", function () {\r",
-									"pm.test(\"Response time is less than 200ms\", function () {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
-									"});\r",
-									"    pm.response.to.have.status(200);\r",
-									"});"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"id": "fe143b0f-8c3e-4ae9-acc1-da6ff0e68c3e",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": " {\r\n     \r\n        \"programName\": \"Jan23-APILEARNERS-SDET-091\",\r\n        \"programDescription\": \"Python Advanced\",\r\n        \"programStatus\": \"Active\",\r\n        \"creationTime\": \"2023-01-07T04:13:00.000+00:00\",\r\n        \"lastModTime\": \"2023-01-07T04:13:00.000+00:00\"\r\n    }",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "{{baseurl}}/saveprogram"
 					},
 					"response": []
 				},
@@ -568,7 +568,7 @@
 	],
 	"variable": [
 		{
-			"id": "aefcf398-3533-4544-95d5-9a212bda825f",
+			"id": "9bde7120-ad67-4c8c-94ee-3b84957c94de",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
