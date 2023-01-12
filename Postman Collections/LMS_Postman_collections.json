@@ -77,6 +77,10 @@
 					"request": {
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{baseurl}}/batches/batchName/:(BatchName)",
 							"host": [
@@ -87,21 +91,8 @@
 								"batchName",
 								":(BatchName)"
 							],
-							"query": [
-								{
-									"key": "status",
-									"value": "400",
-									"disabled": true
-								},
-								{
-									"key": "batchId",
-									"value": "52",
-									"disabled": true
-								}
-							],
 							"variable": [
 								{
-									"id": "43020192-a89a-432e-93c1-0cc973e3bcfe",
 									"key": "(BatchName)",
 									"value": "PY02"
 								}
@@ -383,7 +374,7 @@
 	],
 	"variable": [
 		{
-			"id": "6b9c8479-5f3b-4593-9508-4f9dc49ed228",
+			"id": "436a501a-1d00-4774-b05c-421a0bc331e9",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
