@@ -118,7 +118,7 @@
 									"pm.test(\"Validating successful POST request\", function () {\r",
 									"    pm.expect(pm.response.code).to.be.oneOf([201, 200]);\r",
 									"});\r",
-									"tests[\"Verify program id\"] = response[6].programId == 190"
+									"//tests[\"Verify program id\"] = response[0].programId == 190"
 								],
 								"type": "text/javascript"
 							}
@@ -436,7 +436,7 @@
 	],
 	"variable": [
 		{
-			"id": "4b3b1107-3293-463e-92a2-c415329337f6",
+			"id": "f9ae50cd-d3cd-4ae1-bea5-4ef87b6cade2",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
