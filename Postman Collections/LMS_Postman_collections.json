@@ -216,7 +216,7 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "BatchId",
 					"id": "b7f349f3-16b9-44b2-8128-d086ffaf494b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -386,7 +386,7 @@
 	],
 	"variable": [
 		{
-			"id": "20f1db76-9c66-4a70-8b3a-3e6d74a44441",
+			"id": "f7f5a8ae-cff4-4705-b834-929a124a9421",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
