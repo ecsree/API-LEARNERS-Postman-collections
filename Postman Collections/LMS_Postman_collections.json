@@ -30,7 +30,7 @@
 							}
 						}
 					],
-					"_postman_id": "1b320943-40f2-4d2e-bd3e-c253cb2643e0",
+					"id": "1b320943-40f2-4d2e-bd3e-c253cb2643e0",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -39,7 +39,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\"batchName\": \"PY02\",\r\n\"batchDescription\": \"Python\",\r\n\"batchStatus\": \"Active\",\r\n\"batchNoOfClasses\": 12,\r\n\"programId\": 395\r\n}\r\n",
+							"raw": "{\r\n\"batchName\": \"PY04\",\r\n\"batchDescription\": \"Jan23-API Learners-SDET-SDET01-001\",\r\n\"batchStatus\": \"Active\",\r\n\"batchNoOfClasses\": 12,\r\n\"programId\": 395\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -70,7 +70,7 @@
 							}
 						}
 					],
-					"_postman_id": "89ce6288-dfec-4090-a372-87a11ea3454c",
+					"id": "89ce6288-dfec-4090-a372-87a11ea3454c",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -103,8 +103,7 @@
 								{
 									"id": "43020192-a89a-432e-93c1-0cc973e3bcfe",
 									"key": "(BatchName)",
-									"value": "PY02",
-									"type": "string"
+									"value": "PY02"
 								}
 							]
 						}
@@ -133,7 +132,7 @@
 							}
 						}
 					],
-					"_postman_id": "90453f09-89f5-4205-a609-cd3dfb59cbfd",
+					"id": "90453f09-89f5-4205-a609-cd3dfb59cbfd",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -153,8 +152,7 @@
 							"variable": [
 								{
 									"key": "(ProgramId)",
-									"value": "190",
-									"type": "string"
+									"value": "190"
 								}
 							]
 						}
@@ -191,7 +189,7 @@
 							}
 						}
 					],
-					"_postman_id": "3143d3e8-b6d0-47c0-b569-27514e11e59a",
+					"id": "3143d3e8-b6d0-47c0-b569-27514e11e59a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -219,8 +217,7 @@
 							"variable": [
 								{
 									"key": "batchid",
-									"value": "105",
-									"type": "string"
+									"value": "105"
 								}
 							]
 						}
@@ -228,7 +225,7 @@
 					"response": []
 				}
 			],
-			"_postman_id": "66afdad8-a421-4581-a4a3-d0f15f206ee9"
+			"id": "66afdad8-a421-4581-a4a3-d0f15f206ee9"
 		},
 		{
 			"name": "Programs",
@@ -249,7 +246,7 @@
 							}
 						}
 					],
-					"_postman_id": "98685280-e11d-4fda-bf3a-bedc45d64212",
+					"id": "98685280-e11d-4fda-bf3a-bedc45d64212",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -276,7 +273,7 @@
 							}
 						}
 					],
-					"_postman_id": "08574813-88e4-4ba0-a403-efa0afe454f6",
+					"id": "08574813-88e4-4ba0-a403-efa0afe454f6",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -296,8 +293,7 @@
 								{
 									"id": "8a624745-1319-47b0-b204-89bdb042f61d",
 									"key": "programId",
-									"value": "213",
-									"type": "string"
+									"value": "213"
 								}
 							]
 						}
@@ -323,7 +319,7 @@
 							}
 						}
 					],
-					"_postman_id": "2f91aca4-093b-47f3-8d1a-6ec3f79c548d",
+					"id": "2f91aca4-093b-47f3-8d1a-6ec3f79c548d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -352,8 +348,7 @@
 								{
 									"id": "9664ea0e-4f27-4ced-b63b-091234ab0654",
 									"key": "programId",
-									"value": null,
-									"type": "any"
+									"value": null
 								}
 							]
 						}
@@ -361,7 +356,7 @@
 					"response": []
 				}
 			],
-			"_postman_id": "140acfcc-4e7c-4e7a-b8f4-252656af4dc4"
+			"id": "140acfcc-4e7c-4e7a-b8f4-252656af4dc4"
 		}
 	],
 	"event": [
@@ -388,7 +383,7 @@
 	],
 	"variable": [
 		{
-			"id": "b4075c79-77b1-4f34-bc06-7168e46eb8a8",
+			"id": "6b9c8479-5f3b-4593-9508-4f9dc49ed228",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
