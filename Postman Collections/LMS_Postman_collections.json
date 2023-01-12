@@ -233,8 +233,8 @@
 									"pm.test(\"Status code is 200\",()=>{\r",
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
-									"pm.test(\"Status code is 200\",()=>{\r",
-									"    pm.response.to.have.status(400);\r",
+									"pm.test(\"Status code is 400\",()=>{\r",
+									"    pm.response.to.have.status(400)(\"BadRequest\");\r",
 									"});"
 								],
 								"type": "text/javascript"
@@ -426,7 +426,7 @@
 	],
 	"variable": [
 		{
-			"id": "0b83a585-0c90-4efc-8a06-67b3cf29cc6b",
+			"id": "403cd7df-14fa-4ebc-9e26-c09f8c921dec",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
