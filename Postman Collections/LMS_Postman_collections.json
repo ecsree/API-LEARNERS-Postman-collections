@@ -536,7 +536,22 @@
 								}
 							}
 						},
-						"url": "{{baseurl}}/saveprogram"
+						"url": {
+							"raw": "{{baseurl}}/deletebyprogid/:(ProgramID)",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"deletebyprogid",
+								":(ProgramID)"
+							],
+							"variable": [
+								{
+									"key": "(ProgramID)",
+									"value": "869"
+								}
+							]
+						}
 					},
 					"response": []
 				}
@@ -568,7 +583,7 @@
 	],
 	"variable": [
 		{
-			"id": "3c1a4c1f-b3ed-49f7-91e8-4d70b6ea1c40",
+			"id": "5befa021-2335-43ab-9df0-4273df0d7464",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
