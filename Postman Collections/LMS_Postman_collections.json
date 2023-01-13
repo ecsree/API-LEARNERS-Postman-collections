@@ -279,6 +279,18 @@
 				},
 				{
 					"name": "Get all Batches",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e70b1dec-d145-4cd5-898c-50ea68639b9d",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "117e6360-397e-4720-986f-003acb43efee",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -609,7 +621,7 @@
 	],
 	"variable": [
 		{
-			"id": "1eb73ef7-8b59-4292-8eda-e86ef8475dae",
+			"id": "b99f3f52-504b-47c4-b3d4-0bf03b9646af",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
