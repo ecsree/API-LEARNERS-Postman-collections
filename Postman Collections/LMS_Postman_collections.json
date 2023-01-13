@@ -601,7 +601,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "45c48605-bd2f-4fd0-89c3-1c07b4c3c587",
+				"id": "a165e560-41bd-416e-934d-57ca3869c718",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -611,7 +611,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "44b3d9b0-3b28-4fcb-bb54-ccce44b0b08e",
+				"id": "4e0382f9-412b-4e88-a2f2-c8eb5ac6c162",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -621,7 +621,7 @@
 	],
 	"variable": [
 		{
-			"id": "b99f3f52-504b-47c4-b3d4-0bf03b9646af",
+			"id": "986d0da3-5bfc-4510-af8b-b49f5f803364",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
