@@ -298,7 +298,8 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": "{{baseurl}}/batches/batchId/264"
 					},
 					"response": []
 				}
@@ -608,7 +609,7 @@
 	],
 	"variable": [
 		{
-			"id": "94430d3f-3430-46db-9e14-2e60f1156db2",
+			"id": "1eb73ef7-8b59-4292-8eda-e86ef8475dae",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
