@@ -94,7 +94,7 @@
 							"variable": [
 								{
 									"key": "(BatchName)",
-									"value": "Hackathon-API-003"
+									"value": "PY04"
 								}
 							]
 						}
@@ -605,7 +605,7 @@
 	],
 	"variable": [
 		{
-			"id": "0112865f-ad77-4ecc-aea0-fb2d5345d075",
+			"id": "b03a18e7-101f-4046-9e7c-f01bf4faa4d7",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
