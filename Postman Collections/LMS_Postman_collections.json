@@ -289,6 +289,18 @@
 						"url": "{{baseurl}}/batches"
 					},
 					"response": []
+				},
+				{
+					"name": "New Request",
+					"id": "b99b00bf-483f-4cae-8c72-17e9ac2aa6b8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "66afdad8-a421-4581-a4a3-d0f15f206ee9"
@@ -596,7 +608,7 @@
 	],
 	"variable": [
 		{
-			"id": "d7c7b84a-0b9c-419a-a421-dd6adb758e13",
+			"id": "95f5291c-7670-4748-99b6-3bd2064170ce",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
