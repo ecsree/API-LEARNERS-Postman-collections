@@ -94,7 +94,7 @@
 							"variable": [
 								{
 									"key": "(BatchName)",
-									"value": "Hackathon-API-003\n"
+									"value": "Jan23-API_LEARNERS-SDET-SDET01-004\n"
 								}
 							]
 						}
@@ -605,7 +605,7 @@
 	],
 	"variable": [
 		{
-			"id": "e98718c0-45e6-422a-a71b-2f15492d51fa",
+			"id": "9e176f63-af6c-47d8-a628-b4791bb311d8",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
