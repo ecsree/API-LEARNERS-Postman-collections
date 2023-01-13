@@ -202,22 +202,7 @@
 								}
 							}
 						},
-						"url": {
-							"raw": "{{baseurl}}/batches/:batchid",
-							"host": [
-								"{{baseurl}}"
-							],
-							"path": [
-								"batches",
-								":batchid"
-							],
-							"variable": [
-								{
-									"key": "batchid",
-									"value": "105"
-								}
-							]
-						}
+						"url": "{{baseurl}}/batches/52"
 					},
 					"response": []
 				},
@@ -620,7 +605,7 @@
 	],
 	"variable": [
 		{
-			"id": "ef9b0be6-e728-4bba-940b-d5812d3044c0",
+			"id": "3b3bc947-2365-4da8-b088-72e0a64c1c63",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
