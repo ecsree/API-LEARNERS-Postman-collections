@@ -195,14 +195,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"batchName\": \"SDET78\",\r\n        \"batchDescription\": \"Java\",\r\n        \"batchStatus\": \"Active\",\r\n        \"batchNoOfClasses\": 12,\r\n        \"programId\": 459,\r\n        \"programName\": \"InterfaceStrikers-SDET-006\"\r\n}",
+							"raw": "{\r\n    \"batchId\": 364,\r\n        \"batchName\": \"PY02\",\r\n        \"batchDescription\": \"Python\",\r\n        \"batchStatus\": \"Active\",\r\n        \"batchNoOfClasses\": 12,\r\n        \"programId\": 1000,\r\n        \"programName\": \"Jan23-SAvePrograms-SDET-004\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{baseurl}}/batches/52"
+						"url": "{{baseurl}}/batches/364"
 					},
 					"response": []
 				},
@@ -605,7 +605,7 @@
 	],
 	"variable": [
 		{
-			"id": "3b3bc947-2365-4da8-b088-72e0a64c1c63",
+			"id": "d62d3315-2da5-46fe-909e-1c78d9a29262",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
