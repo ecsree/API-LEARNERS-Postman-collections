@@ -608,7 +608,7 @@
 								}
 							}
 						},
-						"url": "{{baseurl}}/program/Jan13-APILEARNERS-SDET-55"
+						"url": "{{baseurl}}/deletebyprogname/Jan13-APILEARNERS-SDET-55"
 					},
 					"response": []
 				}
@@ -640,7 +640,7 @@
 	],
 	"variable": [
 		{
-			"id": "54ebe079-17ac-4b5f-af08-14f325e9776c",
+			"id": "d3032ef6-0c47-4bf5-b3ff-b1042f7b4c78",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
