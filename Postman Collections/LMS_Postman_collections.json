@@ -576,6 +576,61 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Delete Program By Name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5040b543-3f26-418d-9b3a-1f3d45586463",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "79631105-d7bc-4a94-b338-040b81cf2c38",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/deletebyprogid/:(ProgramID)",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"deletebyprogid",
+								":(ProgramID)"
+							],
+							"variable": [
+								{
+									"id": "3652ff45-cdb4-4872-be30-2d4c3a5e60ab",
+									"key": "(ProgramID)",
+									"value": "724"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"id": "140acfcc-4e7c-4e7a-b8f4-252656af4dc4"
@@ -605,7 +660,7 @@
 	],
 	"variable": [
 		{
-			"id": "b03a18e7-101f-4046-9e7c-f01bf4faa4d7",
+			"id": "3b9a4537-cd6a-4db3-ae69-fa750e86b1a4",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
