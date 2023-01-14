@@ -613,19 +613,18 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseurl}}/deletebyprogid/:(ProgramID)",
+							"raw": "{{baseurl}}/deletebyprogid/:(Jan13-APILEARNERS-SDET-55)",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"deletebyprogid",
-								":(ProgramID)"
+								":(Jan13-APILEARNERS-SDET-55)"
 							],
 							"variable": [
 								{
-									"id": "3652ff45-cdb4-4872-be30-2d4c3a5e60ab",
-									"key": "(ProgramID)",
-									"value": "724"
+									"key": "(Jan13-APILEARNERS-SDET-55)",
+									"value": null
 								}
 							]
 						}
@@ -660,7 +659,7 @@
 	],
 	"variable": [
 		{
-			"id": "ab294d3e-7d72-421e-a19d-bc8387d9f719",
+			"id": "e08cf1bc-c5fe-4345-90bc-4323508324ac",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
