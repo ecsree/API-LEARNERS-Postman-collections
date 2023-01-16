@@ -207,6 +207,61 @@
 					"response": []
 				},
 				{
+					"name": "BatchId Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "de9209bc-15c4-4696-9591-d43f56ffad64",
+								"exec": [
+									"pm.test(\"Status code is 200\",()=>{\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type header is application/json\",() => {\r",
+									"    pm.expect(\r",
+									"    pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"const jsoninfo=pm.response.json();\r",
+									"pm.test(\"Test data type of the response\", () =>{\r",
+									"    pm.expect(jsoninfo).to.be.an(\"object\");\r",
+									"    pm.expect(jsoninfo.batchName).to.be.a(\"string\");\r",
+									"    pm.expect(jsoninfo.batchStatus).to.be.a(\"string\");\r",
+									"    pm.expect(jsoninfo.programId).to.be.a(\"number\");\r",
+									"\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "e6555bf9-cd45-45e1-88e0-2919965946aa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \r\n        \"batchName\": \"PY04\",\r\n        \"batchDescription\": \"Python\",\r\n        \"batchStatus\": \"Active\",\r\n        \"batchNoOfClasses\": 12,\r\n        \"programId\": 1000,\r\n        \"programName\": \"Jan23-SAvePrograms-SDET-004\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseurl}}/batches/364"
+					},
+					"response": []
+				},
+				{
 					"name": "BatchId",
 					"event": [
 						{
@@ -254,7 +309,7 @@
 							"variable": [
 								{
 									"key": "(batchid)",
-									"value": "223"
+									"value": "1473"
 								}
 							]
 						}
@@ -497,7 +552,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": " {\r\n     \r\n        \"programName\": \"Jan23-APILEARNERS-SDET-097\",\r\n        \"programDescription\": \"Python Advanced\",\r\n        \"programStatus\": \"Active\",\r\n        \"creationTime\": \"2023-01-07T04:13:00.000+00:00\",\r\n        \"lastModTime\": \"2023-01-07T04:13:00.000+00:00\"\r\n    }",
+							"raw": " {\r\n     \r\n        \"programName\": \"Jan23-APILEARNERS-SDET-002\",\r\n        \"programDescription\": \"PythonGSFG is Advanced\",\r\n        \"programStatus\": \"Active\",\r\n        \"creationTime\": \"2023-01-07T04:13:00.000+00:00\",\r\n        \"lastModTime\": \"2023-01-07T04:13:00.000+00:00\"\r\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -516,7 +571,7 @@
 							"variable": [
 								{
 									"key": "programName",
-									"value": "Jan23-APILEARNERS-SDET-093"
+									"value": "Jan23-CRUDInterfacingNinjas-SDET-20-219522542324200"
 								}
 							]
 						}
@@ -640,7 +695,7 @@
 	],
 	"variable": [
 		{
-			"id": "d3032ef6-0c47-4bf5-b3ff-b1042f7b4c78",
+			"id": "9d7a9d94-3a53-48a4-be0a-68bcb9c9d057",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
