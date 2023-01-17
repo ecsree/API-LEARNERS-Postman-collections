@@ -676,9 +676,12 @@
 							"script": {
 								"id": "5040b543-3f26-418d-9b3a-1f3d45586463",
 								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"\r",
 									"pm.test(\"Status code is 200\", function () {\r",
-									"pm.test(\"Content-Type is present\", function () {\r",
-									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"    pm.response.to.have.status(200);\r",
 									"});"
 								],
 								"type": "text/javascript"
@@ -701,7 +704,22 @@
 								}
 							}
 						},
-						"url": "{{baseurl}}/deletebyprogname/emmy.net"
+						"url": {
+							"raw": "{{baseurl}}/deletebyprogname/:(ProgramName)",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"deletebyprogname",
+								":(ProgramName)"
+							],
+							"variable": [
+								{
+									"key": "(ProgramName)",
+									"value": "vicky.info"
+								}
+							]
+						}
 					},
 					"response": []
 				}
@@ -733,7 +751,7 @@
 	],
 	"variable": [
 		{
-			"id": "867e9616-6abc-4963-9f1f-098f729aefee",
+			"id": "b94cebaf-a68b-49bd-b0b4-047b91e34706",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
