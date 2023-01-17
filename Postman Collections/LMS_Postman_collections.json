@@ -45,7 +45,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\"batchName\": \"Jan23-API_LEARNERS-SDET-SDET01-008\",\r\n\"batchDescription\": \"Jan23-API Learners-SDET-SDET01-001\",\r\n\"batchStatus\": \"Active\",\r\n\"batchNoOfClasses\": 12,\r\n\"programId\": 395\r\n}\r\n",
+							"raw": "{\r\n\"batchName\": \"Jan23-API_LEARNERS-SDET-SDET01-002\",\r\n\"batchDescription\": \"Jan23-API Learners-SDET-SDET01-001\",\r\n\"batchStatus\": \"Active\",\r\n\"batchNoOfClasses\": 12,\r\n\"programId\": 395\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -751,7 +751,7 @@
 	],
 	"variable": [
 		{
-			"id": "b337b4b1-e256-4ab6-a2fa-e62ab36407ed",
+			"id": "7fc6e7e7-f05a-4fec-841a-43494387ab7a",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
