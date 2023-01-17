@@ -16,15 +16,21 @@
 							"script": {
 								"id": "16f73039-363b-478d-b970-65f56156a83a",
 								"exec": [
-									"pm.test(\"Verify response time is less than 200ms\", function () {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(300);\r",
-									"    \r",
-									"});\r",
+									"\r",
 									"pm.test(\"Successful POST request\", function () {\r",
 									"    pm.expect(pm.response.code).to.be.oneOf([201, 200]);\r",
 									"    });\r",
 									"    \r",
-									"    console.log(pm.response.code);"
+									"    console.log(pm.response.code);pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"    });\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body is correct\", function () {\r",
+									"    pm.response.to.have.body(\"Jan23-API_LEARNERS-SDET-SDET01-007\");\r",
+									"});"
 								],
 								"type": "text/javascript"
 							}
@@ -39,7 +45,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\"batchName\": \"Jan23-API_LEARNERS-SDET-SDET01-004\",\r\n\"batchDescription\": \"Jan23-API Learners-SDET-SDET01-001\",\r\n\"batchStatus\": \"Active\",\r\n\"batchNoOfClasses\": 12,\r\n\"programId\": 395\r\n}\r\n",
+							"raw": "{\r\n\"batchName\": \"Jan23-API_LEARNERS-SDET-SDET01-007\",\r\n\"batchDescription\": \"Jan23-API Learners-SDET-SDET01-001\",\r\n\"batchStatus\": \"Active\",\r\n\"batchNoOfClasses\": 12,\r\n\"programId\": 395\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -695,7 +701,7 @@
 	],
 	"variable": [
 		{
-			"id": "9d7a9d94-3a53-48a4-be0a-68bcb9c9d057",
+			"id": "b6b92628-15f7-45b9-9450-51f41596676e",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
