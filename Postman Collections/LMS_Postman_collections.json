@@ -233,61 +233,6 @@
 					"response": []
 				},
 				{
-					"name": "BatchId Copy",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "de9209bc-15c4-4696-9591-d43f56ffad64",
-								"exec": [
-									"pm.test(\"Status code is 200\",()=>{\r",
-									"    pm.response.to.have.status(200);\r",
-									"});\r",
-									"\r",
-									"pm.test(\"Content-Type header is application/json\",() => {\r",
-									"    pm.expect(\r",
-									"    pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
-									"});\r",
-									"\r",
-									"pm.test(\"Response time is less than 200ms\", function () {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
-									"});\r",
-									"\r",
-									"\r",
-									"const jsoninfo=pm.response.json();\r",
-									"pm.test(\"Test data type of the response\", () =>{\r",
-									"    pm.expect(jsoninfo).to.be.an(\"object\");\r",
-									"    pm.expect(jsoninfo.batchName).to.be.a(\"string\");\r",
-									"    pm.expect(jsoninfo.batchStatus).to.be.a(\"string\");\r",
-									"    pm.expect(jsoninfo.programId).to.be.a(\"number\");\r",
-									"\r",
-									"});"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"id": "e6555bf9-cd45-45e1-88e0-2919965946aa",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n   \r\n        \"batchName\": \"PY04\",\r\n        \"batchDescription\": \"Python\",\r\n        \"batchStatus\": \"Active\",\r\n        \"batchNoOfClasses\": 12,\r\n        \"programId\": 1000,\r\n        \"programName\": \"Jan23-SAvePrograms-SDET-004\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "{{baseurl}}/batches/364"
-					},
-					"response": []
-				},
-				{
 					"name": "BatchId",
 					"event": [
 						{
@@ -721,7 +666,7 @@
 	],
 	"variable": [
 		{
-			"id": "383c56f0-e7b1-49f0-b8b7-5278a5bf6e2d",
+			"id": "7d6a0786-6cb4-4a7a-a1fd-b529afb33ab1",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
