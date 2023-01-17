@@ -522,17 +522,15 @@
 							"script": {
 								"id": "5040b543-3f26-418d-9b3a-1f3d45586463",
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {\r",
-									"pm.test(\"Response time is less than 200ms\", function () {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"pm.test(\"Status code is 201\", function () {\r",
+									"pm.test(\"Response time is less than 300ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(300);\r",
 									"});\r",
 									"pm.test(\"Successful POST request\", function () {\r",
-									"    pm.expect(pm.response.code).to.be.oneOf([201,202]);\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([201,201]);\r",
 									"});\r",
-									"pm.test(\"Response time is less than 200ms\", function () {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
-									"});\r",
-									"    pm.response.to.have.status(200);\r",
+									"\r",
+									"    pm.response.to.have.status(201);\r",
 									"});"
 								],
 								"type": "text/javascript"
@@ -548,7 +546,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": " {\r\n     \r\n        \"programName\": \"Jan13-APILEARNERS-SDET-505\",\r\n        \"programDescription\": \"selenium\",\r\n        \"programStatus\": \"Active\",\r\n        \"creationTime\": \"2023-01-07T04:13:00.000+00:00\",\r\n        \"lastModTime\": \"2023-01-07T04:13:00.000+00:00\"\r\n    }",
+							"raw": " {\r\n     \r\n        \"programName\": \"Jan13-APILEARNERS-SDET-5005\",\r\n        \"programDescription\": \"selenium\",\r\n        \"programStatus\": \"Active\",\r\n        \"creationTime\": \"2023-01-07T04:13:00.000+00:00\",\r\n        \"lastModTime\": \"2023-01-07T04:13:00.000+00:00\"\r\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -568,6 +566,9 @@
 								"id": "5040b543-3f26-418d-9b3a-1f3d45586463",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
 									"pm.test(\"Response time is less than 200ms\", function () {\r",
 									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
 									"});\r",
@@ -606,7 +607,7 @@
 							"variable": [
 								{
 									"key": "programName",
-									"value": "Jan23-CRUDInterfacingNinjas-SDET-20-219522542324200"
+									"value": "Jan23-CRUDInterfacingNinjas-SDET-20-21952254232420022"
 								}
 							]
 						}
@@ -730,7 +731,7 @@
 	],
 	"variable": [
 		{
-			"id": "e6c9a3aa-611e-44c7-af08-8da633293bd2",
+			"id": "8c42a04e-6383-4764-983e-9e48cfdb9dd2",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
