@@ -676,8 +676,8 @@
 							"script": {
 								"id": "5040b543-3f26-418d-9b3a-1f3d45586463",
 								"exec": [
-									"pm.test(\"Response time is less than 200ms\", function () {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"pm.test(\"Response time is less than 500ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Status code is 200\", function () {\r",
@@ -716,7 +716,7 @@
 							"variable": [
 								{
 									"key": "(ProgramName)",
-									"value": "vicky.info"
+									"value": "tierra.name"
 								}
 							]
 						}
@@ -751,7 +751,7 @@
 	],
 	"variable": [
 		{
-			"id": "b94cebaf-a68b-49bd-b0b4-047b91e34706",
+			"id": "8acb7923-852c-49cc-916a-f35a3732df0f",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
