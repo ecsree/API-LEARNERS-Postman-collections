@@ -295,7 +295,16 @@
 							"script": {
 								"id": "e70b1dec-d145-4cd5-898c-50ea68639b9d",
 								"exec": [
-									""
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
+									"pm.test(\"Response time is less than 350ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(350);\r",
+									"});"
 								],
 								"type": "text/javascript"
 							}
@@ -314,6 +323,26 @@
 				},
 				{
 					"name": "Get Batch by Id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9430e4b8-121e-4677-92a7-28c20e924d3e",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "b99b00bf-483f-4cae-8c72-17e9ac2aa6b8",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -321,7 +350,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{baseurl}}/batches/batchId/264"
+						"url": "{{baseurl}}/batches/batchId/(BatchId) \n"
 					},
 					"response": []
 				}
@@ -666,7 +695,7 @@
 	],
 	"variable": [
 		{
-			"id": "aee994cc-9728-4eb0-ae3f-68733851b0ee",
+			"id": "a43a4a0c-bb43-44d3-802e-ac9a40363532",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
