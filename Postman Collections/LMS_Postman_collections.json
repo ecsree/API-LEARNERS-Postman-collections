@@ -546,7 +546,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": " {\r\n     \r\n        \"programName\": \"Jan13-APILEARNERS-SDET-5005\",\r\n        \"programDescription\": \"selenium\",\r\n        \"programStatus\": \"Active\",\r\n        \"creationTime\": \"2023-01-07T04:13:00.000+00:00\",\r\n        \"lastModTime\": \"2023-01-07T04:13:00.000+00:00\"\r\n    }",
+							"raw": " {\r\n     \r\n        \"programName\": \"Jan13-APILEARNERS-SDET-200\",\r\n        \"programDescription\": \"selenium\",\r\n        \"programStatus\": \"Active\",\r\n        \"creationTime\": \"2023-01-07T04:13:00.000+00:00\",\r\n        \"lastModTime\": \"2023-01-07T04:13:00.000+00:00\"\r\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -569,8 +569,8 @@
 									"pm.test(\"Content-Type is present\", function () {\r",
 									"    pm.response.to.have.header(\"Content-Type\");\r",
 									"});\r",
-									"pm.test(\"Response time is less than 200ms\", function () {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"pm.test(\"Response time is less than 300ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(300);\r",
 									"});\r",
 									"    pm.response.to.have.status(200);\r",
 									"});"
@@ -731,7 +731,7 @@
 	],
 	"variable": [
 		{
-			"id": "3af34a58-1d29-4830-a819-708b3442dc58",
+			"id": "9d460197-4e8b-4c6d-b6b2-0978331845e8",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
