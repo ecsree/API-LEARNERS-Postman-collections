@@ -677,7 +677,9 @@
 								"id": "5040b543-3f26-418d-9b3a-1f3d45586463",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {\r",
-									""
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"});"
 								],
 								"type": "text/javascript"
 							}
@@ -699,7 +701,7 @@
 								}
 							}
 						},
-						"url": "{{baseurl}}/deletebyprogname/Jan13-APILEARNERS-SDET-55"
+						"url": "{{baseurl}}/deletebyprogname/emmy.net"
 					},
 					"response": []
 				}
@@ -731,7 +733,7 @@
 	],
 	"variable": [
 		{
-			"id": "86e2a138-b545-4895-afa2-8f1b70a28876",
+			"id": "867e9616-6abc-4963-9f1f-098f729aefee",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
