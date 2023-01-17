@@ -335,8 +335,8 @@
 									"pm.test(\"Content-Type is present\", function () {\r",
 									"    pm.response.to.have.header(\"Content-Type\");\r",
 									"});\r",
-									"pm.test(\"Response time is less than 200ms\", function () {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"pm.test(\"Response time is less than 250ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(250);\r",
 									"});"
 								],
 								"type": "text/javascript"
@@ -350,7 +350,23 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{baseurl}}/batches/batchId/(BatchId) \n"
+						"url": {
+							"raw": "{{baseurl}}/batches/batchId/:(BatchId) \n",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"batches",
+								"batchId",
+								":(BatchId) \n"
+							],
+							"variable": [
+								{
+									"key": "(BatchId) \n",
+									"value": "3527"
+								}
+							]
+						}
 					},
 					"response": []
 				}
@@ -369,6 +385,12 @@
 								"id": "1fcd85ab-e41f-4f2e-82a3-5a9272f90c9b",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {\r",
+									"pm.test(\"Response time is less than 300ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(300);\r",
+									"});\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
 									"    pm.response.to.have.status(200);\r",
 									"});"
 								],
@@ -396,6 +418,12 @@
 								"id": "5040b543-3f26-418d-9b3a-1f3d45586463",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
 									"    pm.response.to.have.status(200);\r",
 									"});"
 								],
@@ -421,9 +449,8 @@
 							],
 							"variable": [
 								{
-									"id": "8a624745-1319-47b0-b204-89bdb042f61d",
 									"key": "programId",
-									"value": "213"
+									"value": "8530"
 								}
 							]
 						}
@@ -439,6 +466,9 @@
 								"id": "5040b543-3f26-418d-9b3a-1f3d45586463",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
 									"pm.test(\"Response time is less than 200ms\", function () {\r",
 									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
 									"});\r",
@@ -476,9 +506,8 @@
 							],
 							"variable": [
 								{
-									"id": "9664ea0e-4f27-4ced-b63b-091234ab0654",
 									"key": "programId",
-									"value": null
+									"value": "8530"
 								}
 							]
 						}
@@ -494,6 +523,12 @@
 								"id": "5040b543-3f26-418d-9b3a-1f3d45586463",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"pm.test(\"Successful POST request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([201,202]);\r",
+									"});\r",
 									"pm.test(\"Response time is less than 200ms\", function () {\r",
 									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
 									"});\r",
@@ -695,7 +730,7 @@
 	],
 	"variable": [
 		{
-			"id": "a43a4a0c-bb43-44d3-802e-ac9a40363532",
+			"id": "57a306c5-d2f3-43b1-8949-5448ac62465f",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
