@@ -74,10 +74,7 @@
 									"pm.test(\"Content-Type is present\", function () {\r",
 									"    pm.response.to.have.header(\"Content-Type\");\r",
 									"});\r",
-									"pm.test(\"Your test name\", function () {\r",
-									"    var jsonData = pm.response.json();\r",
-									"    pm.expect(jsonData.value).to.eql(100);\r",
-									"});\r",
+									"\r",
 									"});"
 								],
 								"type": "text/javascript"
@@ -132,7 +129,7 @@
 									"pm.test(\"Validating successful POST request\", function () {\r",
 									"    pm.expect(pm.response.code).to.be.oneOf([201, 200]);\r",
 									"});\r",
-									"//tests[\"Verify program id\"] = response[0].programId == 190"
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -709,7 +706,7 @@
 	],
 	"variable": [
 		{
-			"id": "3c7cec34-f924-465e-b05c-4742681a0220",
+			"id": "54435336-7fa7-4820-a775-4b168da233e1",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
