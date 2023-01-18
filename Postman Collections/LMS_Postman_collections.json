@@ -356,16 +356,13 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "1fcd85ab-e41f-4f2e-82a3-5a9272f90c9b",
+								"id": "6684b79a-3eb3-43e6-8f40-edb7929acda7",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {\r",
-									"pm.test(\"Response time is less than 300ms\", function () {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(300);\r",
-									"});\r",
-									"pm.test(\"Content-Type is present\", function () {\r",
-									"    pm.response.to.have.header(\"Content-Type\");\r",
-									"});\r",
 									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
 									"});"
 								],
 								"type": "text/javascript"
@@ -715,7 +712,7 @@
 	],
 	"variable": [
 		{
-			"id": "cf44ca82-dfe9-4e6c-8f1c-5f6e0762adbc",
+			"id": "bcac0371-970f-4abb-b0c9-d05d02a10e43",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
