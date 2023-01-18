@@ -195,29 +195,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n   \r\n        \"batchName\": \"PY04\",\r\n        \"batchDescription\": \"Python\",\r\n        \"batchStatus\": \"Active\",\r\n        \"batchNoOfClasses\": 12,\r\n        \"programId\": 1000,\r\n        \"programName\": \"Jan23-SAvePrograms-SDET-004\"\r\n}",
+							"raw": "{\r\n   \r\n        \"batchName\": \"python\",\r\n        \"batchDescription\": \"Python\",\r\n        \"batchStatus\": \"Active\",\r\n        \"batchNoOfClasses\": 14,\r\n        \"programId\": 5990,\r\n        \"programName\": \"Jan23-API  LEARNERS\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": {
-							"raw": "{{baseurl}}/batches/:(batchid)",
-							"host": [
-								"{{baseurl}}"
-							],
-							"path": [
-								"batches",
-								":(batchid)"
-							],
-							"variable": [
-								{
-									"key": "(batchid)",
-									"value": "4215"
-								}
-							]
-						}
+						"url": "{{baseurl}}/batches/364"
 					},
 					"response": []
 				},
@@ -734,7 +719,7 @@
 	],
 	"variable": [
 		{
-			"id": "733e0c9a-ef0d-4e48-89e8-f08425a95bec",
+			"id": "e350e1a4-2d8c-4aa0-9d1e-bac44f9f46d5",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
