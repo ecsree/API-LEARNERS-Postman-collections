@@ -297,16 +297,13 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "9430e4b8-121e-4677-92a7-28c20e924d3e",
+								"id": "cdbd8b75-0ba1-4af3-b626-2e44fcb2fe26",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {\r",
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
-									"pm.test(\"Content-Type is present\", function () {\r",
-									"    pm.response.to.have.header(\"Content-Type\");\r",
-									"});\r",
-									"pm.test(\"Response time is less than 250ms\", function () {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(250);\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
 									"});"
 								],
 								"type": "text/javascript"
@@ -321,19 +318,19 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseurl}}/batches/batchId/:(BatchId) \n",
+							"raw": "{{baseurl}}/batches/batchId/:(BatchId)",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"batches",
 								"batchId",
-								":(BatchId) \n"
+								":(BatchId)"
 							],
 							"variable": [
 								{
-									"key": "(BatchId) \n",
-									"value": "3527"
+									"key": "(BatchId)",
+									"value": "1730"
 								}
 							]
 						}
@@ -708,7 +705,7 @@
 	],
 	"variable": [
 		{
-			"id": "0af760f3-a3ea-43f5-a66c-ab59be6a961d",
+			"id": "a32f0bf2-781d-4fa8-aaa2-0fb4d8781f43",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
