@@ -490,15 +490,11 @@
 							"script": {
 								"id": "5040b543-3f26-418d-9b3a-1f3d45586463",
 								"exec": [
-									"pm.test(\"Status code is 201\", function () {\r",
-									"pm.test(\"Response time is less than 300ms\", function () {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(300);\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
 									"});\r",
-									"pm.test(\"Successful POST request\", function () {\r",
-									"    pm.expect(pm.response.code).to.be.oneOf([201,201]);\r",
-									"});\r",
-									"\r",
-									"    pm.response.to.have.status(201);\r",
+									"    pm.response.to.have.status(200);\r",
 									"});"
 								],
 								"type": "text/javascript"
@@ -514,7 +510,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": " {\r\n     \r\n        \"programName\": \"Jan13-APILEARNERS-SDET-2900\",\r\n        \"programDescription\": \"selenium\",\r\n        \"programStatus\": \"Active\",\r\n        \"creationTime\": \"2023-01-07T04:13:00.000+00:00\",\r\n        \"lastModTime\": \"2023-01-07T04:13:00.000+00:00\"\r\n    }",
+							"raw": " {\r\n     \r\n        \"programName\": \"Jan23-APILEARNERS-SDET\",\r\n        \"programDescription\": \"Python Advanced\",\r\n        \"programStatus\": \"Active\",\r\n        \"creationTime\": \"2023-01-07T04:13:00.000+00:00\",\r\n        \"lastModTime\": \"2023-01-07T04:13:00.000+00:00\"\r\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -719,7 +715,7 @@
 	],
 	"variable": [
 		{
-			"id": "e350e1a4-2d8c-4aa0-9d1e-bac44f9f46d5",
+			"id": "cf44ca82-dfe9-4e6c-8f1c-5f6e0762adbc",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
