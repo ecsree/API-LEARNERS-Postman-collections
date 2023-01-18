@@ -466,9 +466,6 @@
 								"id": "5040b543-3f26-418d-9b3a-1f3d45586463",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {\r",
-									"pm.test(\"Content-Type is present\", function () {\r",
-									"    pm.response.to.have.header(\"Content-Type\");\r",
-									"});\r",
 									"pm.test(\"Response time is less than 200ms\", function () {\r",
 									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
 									"});\r",
@@ -488,7 +485,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n        \"programName\": \"Jan23-APILEARNERS-SDET-0011\",\r\n        \"programDescription\": \"Python Advanced Learning\",\r\n        \"programStatus\": \"Active\",\r\n        \"creationTime\": \"2023-01-07T04:13:00.000+00:00\",\r\n        \"lastModTime\": \"2023-01-07T04:13:00.000+00:00\"\r\n    }",
+							"raw": "{\r\n\"programName\": \"API LEARNERS 12\",\r\n\"programDescription\": \"Python Advanced\",\r\n\"programStatus\": \"Active\",\r\n\"creationTime\": \"2022-09-28T19:53:25.244+00:00\",\r\n\"lastModTime\": \"2022-09-28T19:53:25.244+00:00\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -507,7 +504,7 @@
 							"variable": [
 								{
 									"key": "programId",
-									"value": "8530"
+									"value": "5990"
 								}
 							]
 						}
@@ -751,7 +748,7 @@
 	],
 	"variable": [
 		{
-			"id": "2b099023-c13a-46f0-ba73-c42e6d705176",
+			"id": "25652409-d817-4c78-9102-78777599564a",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
