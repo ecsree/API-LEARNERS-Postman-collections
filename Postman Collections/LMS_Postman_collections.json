@@ -558,7 +558,7 @@
 							"variable": [
 								{
 									"key": "programName",
-									"value": "Jan23-APILEARNERS-SDET"
+									"value": "Jan23-APILEARNERS-SDET-010"
 								}
 							]
 						}
@@ -702,7 +702,7 @@
 	],
 	"variable": [
 		{
-			"id": "ca538775-b892-4f29-8730-7bdf444f3f52",
+			"id": "81a893f8-4ade-4227-ab1e-3b9e366bc118",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
