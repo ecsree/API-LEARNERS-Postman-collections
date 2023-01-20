@@ -667,7 +667,7 @@
 							"variable": [
 								{
 									"key": "(ProgramName)",
-									"value": "tierra.name"
+									"value": "Jan23-TechWarrior-SDET-019-3908"
 								}
 							]
 						}
@@ -702,7 +702,7 @@
 	],
 	"variable": [
 		{
-			"id": "6b93aa08-3e3f-4e16-b768-9041ed59399f",
+			"id": "a5386451-a5a5-4c80-bdcf-cc1a4e63db5d",
 			"key": "baseurl",
 			"value": "https://lms-backend-service.herokuapp.com/lms",
 			"type": "string"
